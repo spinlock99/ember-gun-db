@@ -25,8 +25,9 @@ export default Ember.Controller.extend(
         todo.save();
       },
 
-      hi(todo) {
+      toggleComplete(todo) {
         todo.toggleProperty('isComplete');
+        todo.save();
       }
     }
   }
