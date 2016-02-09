@@ -21,7 +21,8 @@ export default Ember.Controller.extend(
     actions: {
       createTodo(title) {
         this.set('title', '');
-        this.store.createRecord('todo', {title: title.target.value});
+        todo = this.store.createRecord('todo', {title: title.target.value});
+        todo.save();
       },
 
       hi(todo) {
